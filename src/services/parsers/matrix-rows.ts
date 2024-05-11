@@ -22,7 +22,7 @@ const parseMatrixRows = (candidateRows: unknown[]): Matrix => {
 
   return {
     values: candidateRows as number[][],
-    rowCount: candidateRows.length,
+    rowCount,
     columnCount,
   }
 }
