@@ -13,7 +13,11 @@
   "license": "ISC",
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72",
   "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.1.0",
     "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "8",
     "typescript": "^5.4.5"
   }
 }
