@@ -4,7 +4,7 @@ import parseMatrix from '../../../src/services/parsers/matrix'
 describe('parseMatrix', () => {
   it('returns matrix if valid', () => {
     // Prepare
-    const serializedMatrix = '[[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]'
+    const serializedMatrix = '[[1,2,3],[6,5,4],[8,8,8],[11,10,12],[13,99,15]]'
 
     // Execute
     const matrix = parseMatrix(serializedMatrix)
@@ -12,10 +12,10 @@ describe('parseMatrix', () => {
     // Assert
     const expectedValues = [
       [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9],
-      [10, 11, 12],
-      [13, 14, 15],
+      [6, 5, 4],
+      [8, 8, 8],
+      [11, 10, 12],
+      [13, 99, 15],
     ]
     expect(matrix).toStrictEqual({
       values: expectedValues,
