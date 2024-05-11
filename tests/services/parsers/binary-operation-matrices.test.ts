@@ -28,8 +28,8 @@ describe('parseBinaryOperationMatrices', () => {
   })
 
   it.each([
-    [['node', './dist/index.js', 'add', '[[1, 2], [3, 4]]']],
-    [['node', './dist/index.js', 'add']],
+    [['node', './dist/index.js', Operator.SUBTRACTION, '[[1, 2], [3, 4]]']],
+    [['node', './dist/index.js', Operator.SUBTRACTION]],
     [['node', './dist/index.js']],
     [['node']],
     [[]],
