@@ -12,19 +12,19 @@ import parseMatrixRows from './matrix-rows'
  */
 const parseMatrix = (serializedMatrix: string): Matrix => {
   /** Holds the parsed JSON or initial parsing result. */
-  let candidateMatrix: unknown
+  let candidateMatrixValues: unknown
 
   try {
-    candidateMatrix = JSON.parse(serializedMatrix)
+    candidateMatrixValues = JSON.parse(serializedMatrix)
   } catch (error) {
     handleParseError(error, serializedMatrix)
   }
 
-  if (!Array.isArray(candidateMatrix)) {
+  if (!Array.isArray(candidateMatrixValues)) {
     throw new InvalidArgumentError(`Matrix argument is invalid: ${serializedMatrix}`)
   }
 
-  return parseMatrixRows(candidateMatrix as unknown[])
+  return parseMatrixRows(candidateMatrixValues as unknown[])
 }
 
 /**
