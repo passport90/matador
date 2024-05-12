@@ -1,4 +1,5 @@
 import Matrix from '../../src/types/matrix'
+import Printer from '../../src/types/printer'
 import printMatrix from '../../src/services/print-matrix'
 
 describe('printMatrix', () => {
@@ -15,7 +16,7 @@ describe('printMatrix', () => {
       columnCount: 3,
     }
 
-    const printer = jest.fn()
+    const printer: Printer = jest.fn()
 
     // Execute
     printMatrix(matrix, printer)
