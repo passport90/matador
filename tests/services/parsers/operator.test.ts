@@ -7,7 +7,6 @@ describe('parseOperator', () => {
     [Operator.ADDITION],
     [Operator.SUBTRACTION],
     [Operator.MULTIPLICATION],
-    [Operator.DETERMINANT],
   ])('returns the operator if valid', validArgument => {
     expect(parseOperator(validArgument)).toBe(validArgument)
   })
@@ -16,7 +15,6 @@ describe('parseOperator', () => {
     ['adt'],
     ['subt'],
     ['multiplication'],
-    ['detttt'],
   ])('throws error if argument invalid', invalidArgument => {
     expect(() => parseOperator(invalidArgument)).toThrow(InvalidArgumentError)
   })
