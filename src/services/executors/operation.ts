@@ -1,20 +1,10 @@
+import Executor from '../../types/executor'
 import Matrix from '../../types/matrix'
 import Operation from '../../types/operation'
 import Operator from '../../types/operator'
 import executeAddition from './addition'
 import executeMultiplication from './multiplication'
 import executeSubtraction from './subtraction'
-
-/**
- * A function type that defines a signature for executing mathematical operations on two matrices.
- * This type is used to abstract the operation execution, allowing the specific operation (addition, subtraction,
- * multiplication) to be dynamically selected and executed.
- *
- * @param leftOperand - The left matrix operand in the operation.
- * @param rightOperand - The right matrix operand in the operation.
- * @returns A Matrix resulting from the operation.
- */
-type Executor = (leftOperand: Matrix, rightOperand: Matrix) => Matrix
 
 /**
  * Executes a mathematical operation on two matrix operands based on the specified operator in the Operation object.
@@ -25,7 +15,7 @@ type Executor = (leftOperand: Matrix, rightOperand: Matrix) => Matrix
  * @returns A Matrix resulting from the executed operation.
  */
 const executeOperation = (operation: Operation): Matrix => {
-  /** Extracts the operator from the operation object to determine the specific execution path. */
+  /** Operator extracted from the operation object to determine the specific execution path. */
   const operator = operation.operator
 
   /**
