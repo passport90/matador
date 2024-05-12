@@ -20,14 +20,14 @@ const parseMatrixRows = (candidateRows: unknown[]): Matrix => {
   }
 
   /** The elements of the first row used for validation and determining column count. */
-  const firstRowElements = candidateRows[0] as unknown
-  validateRow(firstRowElements, null)
+  const firstRowCells = candidateRows[0] as unknown
+  validateRow(firstRowCells, null)
 
   /** Number of columns based on the number of elements in the first row. */
-  const columnCount = (firstRowElements as number[]).length
+  const columnCount = (firstRowCells as number[]).length
 
-  for (const candidateRowElements of candidateRows.slice(1)) {
-    validateRow(candidateRowElements, columnCount)
+  for (const candidateRowCells of candidateRows.slice(1)) {
+    validateRow(candidateRowCells, columnCount)
   }
 
   return {

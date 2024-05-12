@@ -16,11 +16,11 @@ const createMatrix = (rowCount: number, columnCount: number): Matrix => {
 
   for (let i = 0; i < rowCount; ++i) {
     /** A single row, initialized with zero for each element. */
-    const rowElements = []
+    const rowCells = []
     for (let j = 0; j < columnCount; ++j) {
-      rowElements.push(0)
+      rowCells.push(0)
     }
-    rows.push(rowElements)
+    rows.push(rowCells)
   }
 
   return {
