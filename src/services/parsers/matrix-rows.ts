@@ -1,7 +1,15 @@
 import Matrix from '../../types/matrix'
 import validateRow from './validate-row'
 
+/**
+ * Parses an array of unknown data types, attempting to construct a valid Matrix object by validating each row for
+ * consistency and correct format. Assumes that all rows should have the same number of elements as the first row.
+ *
+ * @param candidateRows - An array of unknown elements representing potential matrix rows.
+ * @returns A Matrix object with structured matrix data including values, row count, and column count.
+ */
 const parseMatrixRows = (candidateRows: unknown[]): Matrix => {
+  /** Number of rows in the candidate matrix. */
   const rowCount = candidateRows.length
   if (rowCount === 0) {
     return {
@@ -11,9 +19,11 @@ const parseMatrixRows = (candidateRows: unknown[]): Matrix => {
     }
   }
 
+  /** The elements of the first row used for validation and determining column count. */
   const firstRowElements = candidateRows[0] as unknown
   validateRow(firstRowElements, null)
 
+  /** Number of columns based on the number of elements in the first row. */
   const columnCount = (firstRowElements as number[]).length
 
   for (const candidateRowElements of candidateRows.slice(1)) {
