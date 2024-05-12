@@ -9,7 +9,7 @@ const executeAddition = (leftOperand: Matrix, rightOperand: Matrix): Matrix => {
   )
 
   if (!isDimensionEqual) {
-    throw new InvalidOperandError('Addition operation require matrices with same dimensions.')
+    throw new InvalidOperandError('Addition or substraction operations require matrices with same dimensions.')
   }
 
   const resultant = createMatrix(leftOperand.rowCount, leftOperand.columnCount)
