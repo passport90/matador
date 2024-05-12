@@ -1,6 +1,6 @@
-import * as executeOperationModule from '../src/services/execute-operation'
+import * as executeOperationModule from '../src/services/executors/operation'
 import * as handleErrorModule from '../src/services/handle-error'
-import * as parseArgumentsModule from '../src/services/parse-arguments'
+import * as parseArgumentsModule from '../src/services/parsers/arguments'
 import * as printMatrixModule from '../src/services/print-matrix'
 import Matrix from '../src/types/matrix'
 import Operation from '../src/types/operation'
