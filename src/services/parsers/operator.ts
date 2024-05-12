@@ -6,7 +6,6 @@ const parseOperator = (argument: string): Operator => {
     Operator.ADDITION,
     Operator.SUBTRACTION,
     Operator.MULTIPLICATION,
-    Operator.DETERMINANT,
   ]
 
   if (!validOperators.includes(argument)) {
