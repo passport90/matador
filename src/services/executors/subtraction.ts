@@ -1,4 +1,4 @@
-import Matrix from '../../types/matrix'
+import Executor from '../../types/executor'
 import executeAddition from './addition'
 import negateMatrix from '../negate-matrix'
 
@@ -10,8 +10,9 @@ import negateMatrix from '../negate-matrix'
  * @param leftOperand - The left matrix operand in the subtraction operation.
  * @param rightOperand - The right matrix operand in the subtraction operation.
  * @returns A new Matrix that is the result of subtracting the right operand from the left operand.
+ * @throws {InvalidOperandError} If the dimensions of the left and right operands do not match.
  */
-const executeSubtraction = (leftOperand: Matrix, rightOperand: Matrix): Matrix => (
+const executeSubtraction: Executor = (leftOperand, rightOperand) => (
   executeAddition(leftOperand, negateMatrix(rightOperand))
 )
 
