@@ -1,8 +1,8 @@
 import Matrix from '../../src/types/matrix'
-import getSignFlippedMatrix from '../../src/services/get-sign-flipped-matrix'
+import negateMatrix from '../../src/services/negate-matrix'
 
-describe('getSignFlippedMatrix', () => {
-  it('returns a matrix with values that have its sign flipped from the original matrix', () => {
+describe('negateMatrix', () => {
+  it('returns a matrix with negated values from the original matrix', () => {
     // Prepare
     const matrix: Matrix = {
       values: [
@@ -16,10 +16,10 @@ describe('getSignFlippedMatrix', () => {
     }
 
     // Execute
-    const signFlippedMatrix = getSignFlippedMatrix(matrix)
+    const negatedMatrix = negateMatrix(matrix)
 
     // Assert
-    expect(signFlippedMatrix).toStrictEqual({
+    expect(negatedMatrix).toStrictEqual({
       values: [
         [-8, -4, 1],
         [5, -2, -3],
