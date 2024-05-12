@@ -86,6 +86,8 @@ describe('main', () => {
       throw error
     })
 
+    handleErrorSpy.mockReturnValue(undefined)
+
     // Execute
     main(args, outputPrinter, errorPrinter)
 
