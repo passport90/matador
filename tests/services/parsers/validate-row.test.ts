@@ -15,6 +15,17 @@ describe('validateRow', () => {
   })
 
   it.each([
+    [1, null],
+    [null, null],
+    [undefined, null],
+    [true, null],
+    [{ arr: [1, 2] }, 2],
+    ['[1, 2]', 2],
+  ])('throws error if row is not an array', (invalidRow, expectedLength) => {
+    expect(() => validateRow(invalidRow, expectedLength)).toThrow(InvalidArgumentError)
+  })
+
+  it.each([
     [[1, 2, 3], 2],
     [[4, 1], 1],
     [[0.2, 0.3, -3, 34.2, 23], 4],
