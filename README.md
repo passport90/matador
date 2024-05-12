@@ -50,10 +50,12 @@ This script cleans the `dist` folder and rebuilds the project.
 After building the application, you can run it by using the `start` script from the command line. Here is an example of how to use the Matador CLI to perform a matrix addition:
 
 ```bash
-yarn start add "[[1,2],[3,4]]" "[[5,6],[7,8]]"
+yarn start "[[1,2],[3,4]]" + "[[5,6],[7,8]]"
 ```
 
-This command will execute the addition operation between two matrices. The matrices should be specified in JSON format. You can replace `add` with `sub` for subtraction or `mul` for multiplication, depending on the operation you want to perform.
+This command will execute the addition operation between two matrices. The matrices should be specified in JSON format. You can replace + with - for subtraction or * for multiplication, depending on the operation you want to perform.
+
+Ensure the matrices are properly formatted and the operators are correctly placed between them as shown.
 
 ## Author
 

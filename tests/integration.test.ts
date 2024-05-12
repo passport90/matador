@@ -16,7 +16,7 @@ describe('integration test', () => {
 
   it('adds 2 matrices', () => {
     // Prepare
-    const args = ['node', 'dist/index.js', Operator.ADDITION, leftOperand, rightOperand]
+    const args = ['node', 'dist/index.js', leftOperand, Operator.ADDITION, rightOperand]
 
     // Execute
     main(args, outputPrinter, errorPrinter)
@@ -30,7 +30,7 @@ describe('integration test', () => {
 
   it('subtracts 2 matrices', () => {
     // Prepare
-    const args = ['node', 'dist/index.js', Operator.SUBTRACTION, leftOperand, rightOperand]
+    const args = ['node', 'dist/index.js', leftOperand, Operator.SUBTRACTION, rightOperand]
 
     // Execute
     main(args, outputPrinter, errorPrinter)
@@ -44,7 +44,7 @@ describe('integration test', () => {
 
   it('multiplies 2 matrices', () => {
     // Prepare
-    const args = ['node', 'dist/index.js', Operator.MULTIPLICATION, leftOperand, rightOperand]
+    const args = ['node', 'dist/index.js', leftOperand, Operator.MULTIPLICATION, rightOperand]
 
     // Execute
     main(args, outputPrinter, errorPrinter)

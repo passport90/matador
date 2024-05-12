@@ -5,7 +5,7 @@ import parseArguments from '../../../src/services/parsers/arguments'
 describe('parseArguments', () => {
   it('parses binary operation from operator and arguments', () => {
     // Prepare
-    const args = ['node', './dist/index.js', Operator.ADDITION, '[[1, 2], [3, 4]]', '[[5, 6], [7, 8]]']
+    const args = ['node', './dist/index.js', '[[1, 2], [3, 4]]', Operator.ADDITION, '[[5, 6], [7, 8]]']
 
     // Execute
     const operation = parseArguments(args)
@@ -27,8 +27,8 @@ describe('parseArguments', () => {
   })
 
   it.each([
-    [['node', './dist/index.js', Operator.SUBTRACTION, '[[1, 2], [3, 4]]']],
-    [['node', './dist/index.js', Operator.SUBTRACTION]],
+    [['node', './dist/index.js', '[[1, 2], [3, 4]]', Operator.SUBTRACTION]],
+    [['node', './dist/index.js', '[[1, 2], [3, 4]]']],
     [['node', './dist/index.js']],
     [['node']],
     [[]],

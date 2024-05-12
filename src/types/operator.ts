@@ -5,13 +5,13 @@
  */
 enum Operator {
   /** Represents the addition operation between matrices. */
-  ADDITION = 'add',
+  ADDITION = '+',
 
   /** Represents the subtraction operation between matrices. */
-  SUBTRACTION = 'sub',
+  SUBTRACTION = '-',
 
   /** Represents the multiplication operation between matrices. */
-  MULTIPLICATION = 'mul',
+  MULTIPLICATION = '*',
 }
 
 export default Operator
