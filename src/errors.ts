@@ -1,4 +1,4 @@
-export class MatadorError extends Error {}
+export abstract class MatadorError extends Error {}
 
 export class InvalidArgumentError extends MatadorError {
   constructor(message: string) {
