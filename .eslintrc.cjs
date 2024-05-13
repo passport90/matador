@@ -25,6 +25,7 @@ module.exports = {
     'sort-imports': 'error',
     '@stylistic/comma-dangle': ['error', 'always-multiline'],
     '@stylistic/indent': ['error', 2],
+    '@stylistic/function-call-argument-newline': ['error', 'consistent'],
     '@stylistic/function-paren-newline': ['error', 'multiline'],
     '@stylistic/max-len': ['error', { code: 120, tabWidth: 2 }],
     '@stylistic/no-multi-spaces': 'error',
